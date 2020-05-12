@@ -1,0 +1,19 @@
+body{
+    margin:0 auto;
+    padding:0;
+    max-width:1200px;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.custDetails, .billing, .shipping{
+    margin:1em;
+}
+
+.inputField > *{
+
+    display:block;
+}

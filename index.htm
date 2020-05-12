@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="author",content="Albert Ngo">
     <meta name="registration page", content="functional registration page">
-    <meta name="viewport", content="width=device-width , initialscale=1.0">
+    <meta name="viewport", content="wclassth=device-wclassth , initialscale=1.0">
     <title>Registration Page</title> 
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
     <script type="module" src="features.js"></script>
@@ -15,36 +15,110 @@
     
 <main>
 
+<form class="gridContainer">
+
+    <section class="custDetails">
+
+        <h1> Registration Form</h1>
+        
+        <div class="inputField">
+            <label for="firstname">First Name</label>
+            <input class="firstname" type="text" name="firstname">
+        </div>
+
+        <div class="inputField">
+            <label for="lastname">Last Name</label>
+            <input class="lastname" type="text" name="lastname">
+        </div>
+
+        <div class="inputField">
+            <label for="gender">Gender</label>
+            <input class="gender" type="text" name="gender">
+        </div>    
+
+        <div class="inputField">
+            <label for="birthday">Birthday</label>
+            <input class="birthday" type="text" name="birthday">
+        </div>
+
+        <div class="inputField">
+            <label for="email">Email</label>
+            <input class="email" type="text" name="email">
+        </div>
+
+        <div class="inputField">
+            <label for="number">Phone Number</label>
+            <input class="number" type="text" name="number">
+        </div>
+
+    </section>
 
 
-<section class="custDetails">
+    <section class="billing">
 
-    <h1> Registration Form</h1>
+        <h1>Billing Address</h1>
+        <div class="inputField">
+            <label for="streetAdr">Street Address</label>
+            <input class="streetAdr" type="text" name="billStreet">
+        </div>
+        
+        <div class="inputField">
+            <label for="businessName">Business Name</label>
+            <input class="businessName" type="text" name="billBusiness">
+        </div>
+        
+        <div class="inputField">
+            <label for="city">City</label>
+            <input class="city" type="text" name="billCity">
+        </div>
+        
+        <div class="inputField">
+            <label for="state">State</label>
+            <input class="state" type="text" name="billState">
+        </div>
+        
+        <div class="inputField">
+            <label for="zip">Zip Code</label>
+            <input class="zip" type="text" name="billZip">
+        </div>
 
+    </section>
 
+    
 
+    <section class="shipping">
 
-</section>
+        <h1>Shipping Address</h1>
+        <p><input type="checkbox">Same as billing</p>
+        
+        <div class="inputField">
+            <label for="streetAdr">Street Address</label>
+            <input class="streetAdr" type="text" name="street">
+        </div>
 
+        <div class="inputField">
+            <label for="businessName">Business Name</label>
+            <input class="businessName" type="text" name="business">
+        </div>
+        
+        <div class="inputField">
+            <label for="city">City</label>
+            <input class="city" type="text" name="city">
+        </div>
+    
+        <div class="inputField">    
+            <label for="state">State</label>
+            <input class="state" type="text" name="state">
+        </div>
+        
+        <div class="inputField">
+            <label for="zip">Zip Code</label>
+            <input class="zip" type="text" name="zip">
+        </div>
 
+    </section>
 
-<section class="billing">
-
-    <h1>Billing Address</h1>
-
-
-
-</section>
-
-
-<section class="shipping">
-
-    <h1>Shipping Address</h1>
-
-
-
-</section>
-
+</form>
 
 
 
