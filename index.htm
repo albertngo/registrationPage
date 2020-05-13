@@ -14,43 +14,44 @@
 <body>
     
 <main>
-
+<h1> Registration Form</h1>
 <form class="gridContainer">
-
+    
     <section class="custDetails">
 
-        <h1> Registration Form</h1>
+        <h1> Customer Details</h1>
+        <div class="flex-details">
+            <div class="inputField">
+                <label for="firstname">First Name</label>
+                <input class="firstname" type="text" name="firstname">
+            </div>
+
+            <div class="inputField">
+                <label for="lastname">Last Name</label>
+                <input class="lastname" type="text" name="lastname">
+            </div>
+
+            <div class="inputField">
+                <label for="gender">Gender</label>
+                <input class="gender" type="text" name="gender">
+            </div>    
+
+            <div class="inputField">
+                <label for="birthday">Birthday</label>
+                <input class="birthday" type="text" name="birthday">
         
-        <div class="inputField">
-            <label for="firstname">First Name</label>
-            <input class="firstname" type="text" name="firstname">
+            </div>
+
+            <div class="inputField">
+                <label for="email">Email</label>
+                <input class="email" type="text" name="email">
+            </div>
+
+            <div class="inputField">
+                <label for="number">Phone Number</label>
+                <input class="number" type="tel" name="number"  placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
         </div>
-
-        <div class="inputField">
-            <label for="lastname">Last Name</label>
-            <input class="lastname" type="text" name="lastname">
-        </div>
-
-        <div class="inputField">
-            <label for="gender">Gender</label>
-            <input class="gender" type="text" name="gender">
-        </div>    
-
-        <div class="inputField">
-            <label for="birthday">Birthday</label>
-            <input class="birthday" type="text" name="birthday">
-        </div>
-
-        <div class="inputField">
-            <label for="email">Email</label>
-            <input class="email" type="text" name="email">
-        </div>
-
-        <div class="inputField">
-            <label for="number">Phone Number</label>
-            <input class="number" type="text" name="number">
-        </div>
-
     </section>
 
 
@@ -118,6 +119,8 @@
 
     </section>
 
+    <input type="submit">
+    
 </form>
 
 

@@ -4,18 +4,77 @@ body {
   max-width: 1200px;
 }
 
-.gridContainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+main > h1 {
+  text-align: center;
 }
 
-.custDetails, .billing, .shipping {
+.gridContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "details" "billing" "shipping";
+  border: 1px solid black;
+}
+
+@media (min-width: 800px) {
+  .gridContainer {
+        grid-template-areas: "details details" "billing shipping";
+  }
+}
+
+.custDetails {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: details;
   margin: 1em;
 }
 
-.inputField > * {
+.custDetails .inputField {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (min-width: 800px) {
+  .custDetails .inputField {
+    width: 40%;
+  }
+}
+
+.billing {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: billing;
+  margin: 1em;
+}
+
+.shipping {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: shipping;
+  margin: 1em;
+}
+
+.inputField {
+  margin: .3em;
+}
+
+.inputField * {
+  width: 100%;
   display: block;
+}
+
+.flex-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,19 +1,66 @@
+@import 'mixins';
+
 body{
     margin:0 auto;
     padding:0;
     max-width:1200px;
 }
-
+main > h1{
+    text-align: center;
+}
 .gridContainer{
+    width: 80%;
+    margin:0 auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-areas:
+    "details"
+    "billing"
+    "shipping";
+    border: 1px solid black;
+    
+    @include display(800px){
+        grid-template-areas: 
+        "details details"
+        "billing shipping";   
+    }
 }
 
-.custDetails, .billing, .shipping{
+.custDetails{
+    grid-area: details;
+    margin:1em;
+
+    .inputField{
+        width:100%;
+        flex-grow: 1;
+        
+        @include display(800px){
+            width:40%;   
+        }
+    }
+}
+
+.billing{
+    grid-area: billing;
     margin:1em;
 }
 
-.inputField > *{
+.shipping{
+    grid-area: shipping;
+    margin:1em;
+}
 
+.inputField{
+    margin: .3em;
+    
+    
+    * {
+    width: 100%;
     display:block;
+    }
+}
+
+.flex-details{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
