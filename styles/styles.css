@@ -130,6 +130,8 @@ main > h1 {
 }
 
 .nav-container {
+  margin: 0;
+  padding: 0;
   display: none;
   position: fixed;
   left: 0;
@@ -146,6 +148,7 @@ main > h1 {
     position: revert;
     height: revert;
     width: revert;
+    background-color: grey;
   }
 }
 
@@ -188,6 +191,8 @@ main > h1 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -202,6 +207,14 @@ main > h1 {
 .productList a {
   font-size: .5em;
   font-weight: normal;
+}
+
+@media (min-width: 800px) {
+  .productList a {
+    font-size: .8em;
+    background-color: grey;
+    width: 80%;
+  }
 }
 
 @media (min-width: 800px) {
