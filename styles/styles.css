@@ -1,8 +1,32 @@
 body {
   margin: 0 auto;
   padding: 0;
+  min-width: 300px;
   max-width: 1200px;
-  position: relative;
+}
+
+.navShow {
+  position: absolute;
+  z-index: 100;
+  padding: 1em;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 800px) {
+  .navShow {
+    display: none;
+  }
+}
+
+ul, ol, li, a {
+  margin: 0;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  list-style: none;
 }
 
 main > h1 {
@@ -103,5 +127,90 @@ main > h1 {
   width: 80%;
   text-align: center;
   background-color: grey;
+}
+
+.nav-container {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+@media (min-width: 800px) {
+  .nav-container {
+    display: block;
+    position: revert;
+    height: revert;
+    width: revert;
+  }
+}
+
+.nav-container .nav-menu {
+  margin: 30vh auto;
+  text-align: center;
+}
+
+.nav-container .nav-menu li {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+@media (min-width: 800px) {
+  .nav-container .nav-menu li {
+    font-size: 1.2em;
+  }
+}
+
+.nav-container .nav-menu a {
+  display: inline-block;
+  padding: 1em;
+}
+
+.nav-container .nav-menu a:hover {
+  color: blue;
+}
+
+@media (min-width: 800px) {
+  .nav-container .nav-menu {
+    margin: revert;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.prod {
+  position: relative;
+}
+
+.productList {
+  display: none;
+}
+
+.productList a {
+  font-size: .5em;
+  font-weight: normal;
+}
+
+@media (min-width: 800px) {
+  .productList {
+    position: absolute;
+  }
+}
+
+.nav-menu > li:hover .productList {
+  display: block;
 }
 /*# sourceMappingURL=styles.css.map */

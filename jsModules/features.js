@@ -12,3 +12,34 @@ submitbtn.addEventListener("click", (event)=>{
 window.addEventListener("click", event => {
     modal.style.display = "none";
 })
+
+
+//navigation===============================================//
+
+let navigation = document.querySelector(".nav-container");
+let navBtn = document.querySelector(".navShow")
+let navToggle = false;
+
+navBtn.addEventListener("click", event =>{
+    if (!navToggle) {
+        navigation.style.display = "block";
+        navToggle = true;
+    } else {
+        navigation.style.display = "none";
+        navToggle = false;
+    }
+});
+
+//this removes the INLINE display property larger displays
+//allows for css styling of larger display 
+window.addEventListener("resize", event =>{
+    let currentDisplay = navigation.getAttribute("style")
+    console.log(currentDisplay);
+    if (document.documentElement.clientWidth >= 800)
+        navigation.style.removeProperty('display');
+});
+
+//form validations====================================================//
+
+
+
