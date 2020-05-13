@@ -41,5 +41,27 @@ window.addEventListener("resize", event =>{
 
 //form validations====================================================//
 
+let autoFill = document.querySelector(".autofill")
+let fillToggle = false;
+autoFill.addEventListener("click", event=>{
+    if (!fillToggle){
+        //grab all the values from billing
+        let inputData = document.querySelectorAll(".billing input")
+        let fieldObj = new Object();
+        fillToggle = true;
+        //store the class name and value into object
+        for (let field of Array.from(inputData)){
+            if (!fieldObj[field.className]){
+                fieldObj[field.className] = field.value;
+            }
+        }
+        //loop shipping and find field with value (if available)
+        inputData = document.querySelectorAll(".shipping input")
+        for (let field of Array.from(inputData)){
+            if (fieldObj[field.className]){
+                field.value = fieldObj[field.className];
+            }
+        }    
 
-
+    } else fillToggle = false;
+})
