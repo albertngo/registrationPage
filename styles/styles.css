@@ -205,6 +205,11 @@ main > h1 {
   display: none;
 }
 
+.productList + li > a {
+  border-top: 1px solid black;
+  background-color: violet;
+}
+
 .productList a {
   font-size: .5em;
   font-weight: normal;
@@ -213,7 +218,7 @@ main > h1 {
 @media (min-width: 800px) {
   .productList a {
     font-size: .8em;
-    background-color: grey;
+    background-color: white;
     width: 80%;
     border-bottom: 1px solid black;
     border-left: 1px solid black;

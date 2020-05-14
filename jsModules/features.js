@@ -41,6 +41,7 @@ window.addEventListener("resize", event =>{
 
 //form validations====================================================//
 
+//autofill feature
 let autoFill = document.querySelector(".autofill")
 let fillToggle = false;
 autoFill.addEventListener("click", event=>{
@@ -55,7 +56,7 @@ autoFill.addEventListener("click", event=>{
                 fieldObj[field.className] = field.value;
             }
         }
-        //loop shipping and find field with value (if available)
+        //loop shipping and replace shipping field with value (if available)
         inputData = document.querySelectorAll(".shipping input")
         for (let field of Array.from(inputData)){
             if (fieldObj[field.className]){
@@ -65,3 +66,13 @@ autoFill.addEventListener("click", event=>{
 
     } else fillToggle = false;
 })
+
+
+let printOut;
+//reg expression checks
+window.addEventListener('input', event => {
+    clearTimeout(printOut);
+    printOut = setTimeout(()=>{console.log(event.target)}, 200);
+
+})
+
